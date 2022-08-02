@@ -28,6 +28,7 @@ Procedure:
             w : Write the changes.
     $ mkfs.ext4 /dev/sda1
     $ mount /dev/sda1 /mnt
+    $ pacman -Sy archlinux-keyring      # sometimes necessary to fix key problems during pacstrap
     $ pacstrap /mnt base linux linux-firmware vim resolvconf networkmanager grub
     $ genfstab -U /mnt >> /mnt/etc/fstab
     $ arch-chroot /mnt
